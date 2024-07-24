@@ -1,0 +1,5 @@
+min_range,max_range,classification
+0,9.999,Regular
+10,499.999,Bronze
+500,999.999,Silver
+1000,9999999,Gold
