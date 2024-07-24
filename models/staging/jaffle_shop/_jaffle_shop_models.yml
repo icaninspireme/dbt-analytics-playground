@@ -6,7 +6,7 @@ models:
       materialized: view
     columns:
       - name: customer_id
-        tests:
+        data_tests:
           - unique
           - not_null
   - name: stg_jaffle_shop_orders
@@ -14,15 +14,15 @@ models:
       materialized: view
     columns:
       - name: order_id
-        tests:
+        data_tests:
           - unique
           - not_null
       - name: status
-        tests:
+        data_tests:
           - accepted_values:
               values: ['completed','shipped','returned','placed','return_pending']
       - name: customer_id
-        tests:
+        data_tests:
           - relationships:
               to: ref('stg_jaffle_shop_customers')
               field: customer_id 
